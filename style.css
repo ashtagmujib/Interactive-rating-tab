@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: 1440px;
+    height: 100vh;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsl(216, 12%, 8%);
+}
+
+.container {
+    width: 430px;
+    height: 450px;
+    border-radius: 30px;
+
+    background-color: hsl(213, 19%, 18%);
+}
+
+
+
+
+/*startc of rating section*/
+.rating {
+    display: block;
+    padding: 40px;
+}
+
+#headImg {
+    position: relative;
+}
+
+#headImg::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    background-color: hsl(217, 12%, 63%);
+    opacity: 0.1;
+}
+
+
+#words h1{
+    font-size: 30px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    color: hsl(0, 0%, 100%);
+
+    margin-top: 50px;
+}
+
+#words p {
+    color: hsl(217, 12%, 63%);
+    font-size: 17px;
+    line-height: 21px;
+}
+
+#rate {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#rateBtn {
+    position: relative;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(0, 0%, 100%);
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+#rateBtn p {
+    position: relative;
+    text-align: center;
+}
+
+#rateBtn::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -21px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: hsl(217, 12%, 63%);
+    opacity: 0.1;
+}
+
+#rateBtn:hover::before {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    opacity: 1;
+}
+
+
+#rateBtn.active::before {
+    background-color: hsl(217, 12%, 63%);
+    opacity: 1;
+}
+
+#rateBtn.active:hover::before {
+    background-color: hsl(217, 12%, 63%);
+}
+
+#submit {
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    margin-top: 40px;
+    background-color: hsl(25, 97%, 53%);
+
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 5px;
+
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
+
+@media (max-width:375px) {
+        
+    body {
+        width: 375px;
+    }
+
+    .container {
+        width: 300px;
+        height: 450px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+    }
+
+    #rateBtn::before {
+        top: 8px;
+        left: -11px;
+        width: 30px;
+        height: 30px;
+
+    }
+
+    #submit {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    #words h1{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    #words p {
+        color: hsl(217, 12%, 63%);
+        font-size: 15px;
+        line-height: 21px;
+    }
+    
+
+}
+
+/*end of rating section*/
+
+/*start of thank you section*/
+
+.thankYou {
+    display: none;
+    padding: 40px;
+}
+
+#thankSvg {
+    margin-left: 22%;
+}
+
+#rateSelection {
+    text-align: center;
+
+    margin-top: 40px;
+    position: relative;
+}
+
+#rateSelection p {
+    position: relative;
+    color: hsl(25, 97%, 53%);
+}
+
+#rateSelection::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 73px;
+
+    width: 200px;
+    height: 30px;
+    background-color: hsl(217, 12%, 63%);
+    opacity: 0.1;
+    border-radius: 20px;
+}
+
+
+#appreciation {
+    text-align: center;
+}
+
+#appreciation h1{
+    color: hsl(0, 0%, 100%);
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    margin-top: 40px;
+}
+
+#appreciation p {
+    color: hsl(217, 12%, 63%);
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+}
+
+
+@media(max-width:375px) {
+        
+
+    #thankSvg {
+        margin-left: 10%;
+    }
+
+
+    #rateSelection::before {
+        left: 13px;
+    }
+
+
+    #appreciation p {
+        font-size: 15px;
+        line-height: 19px;
+    }
+}
+
+/*end of thank you section*/
+
+
+.attribution {
+    color: hsl(0, 0%, 100%);
+}
